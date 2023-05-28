@@ -1,0 +1,323 @@
+// {
+//   "default": {
+//     "name": "default",
+//     "border": {
+//       "width": 0,
+//       "radius": "0.375rem"
+//     },
+//     "colors": {
+//       "primary": {
+//         "lightest": "#D5E6FC",
+//         "lighter": "#B3D4FF",
+//         "light": "#73B0FF",
+//         "DEFAULT": "#026DF9",
+//         "dark": "#004196",
+//         "darker": "#003273",
+//         "darkest": "#003273"
+//       },
+//       "secondary": {
+//         "lightest": "##FEF3EE",
+//         "lighter": "#FFD4C2",
+//         "light": "#FFA279",
+//         "DEFAULT": "##FF4D00",
+//         "dark": "#BD3B03",
+//         "darker": "#903F1C",
+//         "darkest": "#903F1C"
+//       },
+//       "success": {
+//         "lighter": "#E7F8F2",
+//         "light": "#C3EEDF",
+//         "DEFAULT": "#10B981",
+//         "dark": "#87DCC0",
+//         "darker": "#87DCC0",
+//         "darkest": "#87DCC0"
+//       },
+//       "warning": {
+//         "lightest": "#FFFBEB",
+//         "lighter": "#FEF3C7",
+//         "light": "#FCD34D",
+//         "DEFAULT": "#F59E0B",
+//         "dark": "#B45309",
+//         "darker": "#B45309",
+//         "darkest": "#B45309"
+//       },
+//       "danger": {
+//         "lighter": "#FDECEC",
+//         "light": "#FBD0D0",
+//         "DEFAULT": "#EF4444",
+//         "dark": "#F7A1A1",
+//         "darker": "#F7A1A1",
+//         "darkest": "#F7A1A1"
+//       },
+//       "light": {
+//         "lightest": "#FFFFFF",
+//         "lighter": "#FCFCFD",
+//         "light": "#F9FAFB",
+//         "DEFAULT": "#F2F4F7",
+//         "dark": "#EAECF0",
+//         "darker": "#D0D5DD",
+//         "darkest": "#D0D5DD"
+//       },
+//       "dark": {
+//         "lightest": "#98A2B3",
+//         "lighter": "#667085",
+//         "light": "#475467",
+//         "DEFAULT": "#344054",
+//         "dark": "#1D2939",
+//         "darker": "#101828",
+//         "darkest": "#101828"
+//       }
+//     },
+//     "font": {
+//       "URL": "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+//       "family": "Poppins, sans-serif",
+//       "size": {
+//         "xs": {
+//           "fontSize": "0.625rem",
+//           "fontWeight": 400
+//         },
+//         "sm": {
+//           "fontSize": "0.75rem",
+//           "fontWeight": 400
+//         },
+//         "md": {
+//           "fontSize": "0.875rem",
+//           "fontWeight": 400
+//         },
+//         "lg": {
+//           "fontSize": "1.063rem",
+//           "fontWeight": 400
+//         },
+//         "xl": {
+//           "fontSize": "1.188rem",
+//           "fontWeight": 400
+//         }
+//       }
+//     },
+//     "dimensions": {
+//       "xs": {
+//         "width": "16.67%",
+//         "height": "2.25rem",
+//         "containerHeight": "16.67%"
+//       },
+//       "sm": {
+//         "width": "33.34%",
+//         "height": "2.375rem",
+//         "containerHeight": "33.34%"
+//       },
+//       "md": {
+//         "width": "50%",
+//         "height": "2.5rem",
+//         "containerHeight": "50%"
+//       },
+//       "lg": {
+//         "width": "66.67%",
+//         "height": "2.625rem",
+//         "containerHeight": "66.67%"
+//       },
+//       "xl": {
+//         "width": "83.34%",
+//         "height": "2.75rem",
+//         "containerHeight": "83.34%"
+//       },
+//       "full": {
+//         "height": "100%",
+//         "containerHeight": "100%",
+//         "width": "100%"
+//       }
+//     }
+//   },
+//   "custom": {
+//     "size": {
+//       "xs": {
+//         "width": "16.67%",
+//         "height": "2.25rem",
+//         "containerHeight": "16.67%"
+//       },
+//       "sm": {
+//         "width": "33.34%",
+//         "height": "2.375rem",
+//         "containerHeight": "33.34%"
+//       },
+//       "md": {
+//         "width": "50%",
+//         "height": "2.5rem",
+//         "containerHeight": "50%"
+//       },
+//       "lg": {
+//         "width": "66.67%",
+//         "height": "2.625rem",
+//         "containerHeight": "66.67%"
+//       },
+//       "xl": {
+//         "width": "83.34%",
+//         "height": "2.75rem",
+//         "containerHeight": "83.34%"
+//       },
+//       "full": {
+//         "height": "100%",
+//         "containerHeight": "100%",
+//         "width": "100%"
+//       }
+//     },
+//     "typography": {
+//       "fontSize": {
+//         "xs": {
+//           "fontSize": "0.625rem",
+//           "fontWeight": 400
+//         },
+//         "sm": {
+//           "fontSize": "0.75rem",
+//           "fontWeight": 400
+//         },
+//         "md": {
+//           "fontSize": "0.875rem",
+//           "fontWeight": 400
+//         },
+//         "lg": {
+//           "fontSize": "1.063rem",
+//           "fontWeight": 400
+//         },
+//         "xl": {
+//           "fontSize": "1.188rem",
+//           "fontWeight": 400
+//         }
+//       },
+//       "font": {
+//         "poppins": {
+//           "URL": "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+//           "family": "Poppins, sans-serif"
+//         }
+//       },
+//       "fontWeight": {
+//         "heavy": 800,
+//         "light": 200
+//       }
+//     },
+//     "colorTheme": {
+//       "default": {
+//         "primary": {
+//           "50": "##D5E6FC",
+//           "100": "#B3D4FF",
+//           "200": "#73B0FF",
+//           "300": "#004196",
+//           "400": "#003273",
+//           "DEFAULT": "#026DF9"
+//         },
+//         "secondary": {
+//           "50": "##FEF3EE",
+//           "100": "#FFD4C2",
+//           "200": "#FFA279",
+//           "300": "#BD3B03",
+//           "400": "#903F1C",
+//           "DEFAULT": "##FF4D00"
+//         },
+//         "success": {
+//           "100": "#E7F8F2",
+//           "200": "#C3EEDF",
+//           "300": "#87DCC0",
+//           "DEFAULT": "#10B981"
+//         },
+//         "warning": {
+//           "50": "#FFFBEB",
+//           "100": "#FEF3C7",
+//           "200": "#FCD34D",
+//           "300": "#B45309",
+//           "400": "#8f4003",
+//           "DEFAULT": "#F59E0B"
+//         },
+//         "danger": {
+//           "100": "#FDECEC",
+//           "200": "#FBD0D0",
+//           "300": "#F7A1A1",
+//           "DEFAULT": "#EF4444"
+//         },
+//         "light": {
+//           "50": "#FFFFFF",
+//           "100": "#FCFCFD",
+//           "200": "#F9FAFB",
+//           "300": "#EAECF0",
+//           "400": "#D0D5DD",
+//           "DEFAULT": "#F2F4F7"
+//         },
+//         "dark": {
+//           "50": "#98A2B3",
+//           "100": "#667085",
+//           "200": "#475467",
+//           "300": "#1D2939",
+//           "400": "#101828",
+//           "DEFAULT": "#344054"
+//         }
+//       },
+//       "autumn": {
+//         "primary": {
+//           "50": "##D5E6FC",
+//           "100": "#B3D4FF",
+//           "200": "#73B0FF",
+//           "300": "#004196",
+//           "400": "#003273",
+//           "DEFAULT": "#026DF9"
+//         },
+//         "secondary": {
+//           "50": "##FEF3EE",
+//           "100": "#FFD4C2",
+//           "200": "#FFA279",
+//           "300": "#BD3B03",
+//           "400": "#903F1C",
+//           "DEFAULT": "##FF4D00"
+//         },
+//         "success": {
+//           "100": "#E7F8F2",
+//           "200": "#C3EEDF",
+//           "300": "#87DCC0",
+//           "DEFAULT": "#10B981"
+//         },
+//         "warning": {
+//           "50": "#FFFBEB",
+//           "100": "#FEF3C7",
+//           "200": "#FCD34D",
+//           "300": "#B45309",
+//           "400": "#8f4003",
+//           "DEFAULT": "#F59E0B"
+//         },
+//         "danger": {
+//           "100": "#FDECEC",
+//           "200": "#FBD0D0",
+//           "300": "#F7A1A1",
+//           "DEFAULT": "#EF4444"
+//         },
+//         "light": {
+//           "50": "#FFFFFF",
+//           "100": "#FCFCFD",
+//           "200": "#F9FAFB",
+//           "300": "#EAECF0",
+//           "400": "#D0D5DD",
+//           "DEFAULT": "#F2F4F7"
+//         },
+//         "dark": {
+//           "50": "#98A2B3",
+//           "100": "#667085",
+//           "200": "#475467",
+//           "300": "#1D2939",
+//           "400": "#101828",
+//           "DEFAULT": "#344054"
+//         }
+//       }
+//     }
+//   }
+// }
+
+{
+  "name": "reacharge",
+  "URL": "localhost:3000",
+  "workflows": {
+    "functional": {
+      "heading": [],
+      "navigation": [],
+      "branding": {},
+      "features": [],
+      "dashboardTabs": [],
+      "grid": []
+    }
+  }
+}
