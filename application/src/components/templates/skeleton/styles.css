@@ -1,0 +1,25 @@
+.skeleton-row {
+  width: calc(100% - 8px);
+  height: 40px;
+  border-radius: 6px;
+  margin: 4px;
+  background: rgb(224, 224, 224);
+  background: linear-gradient(
+    90deg,
+    rgba(224, 224, 224, 0.5914740896358543) 0%,
+    rgba(238, 238, 238, 0.40940126050420167) 100%
+  );
+  animation: opacity 3s cubic-bezier(0.52, 0, 0.41, 0.99) infinite alternate;
+  transform-origin: left;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.2;
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0.6;
+  }
+}

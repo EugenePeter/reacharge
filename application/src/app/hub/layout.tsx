@@ -1,17 +1,63 @@
 "use client";
 import { useContext } from "react";
+import Link from "next/link";
+import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import { BaseContext } from "../../context/BaseProvider";
 import { ThemeProvider } from "styled-components";
-import Dashboard from "./components/Dashboard";
-export default function HubLayout({
-  children, // will be a page or nested layout
-}: {
-  children: React.ReactNode;
-}) {
+import { Header, Footer, SideBar, CenterStage, Container } from "@/components";
+import Image from "next/image";
+export default function HubLayout(props: { children: React.ReactNode }) {
+  const { children } = props;
   const theme = useContext(BaseContext);
+  const currentPath = useSelectedLayoutSegment();
+
+  const branding = {
+    enabled: true,
+    URL: "https://img.logoipsum.com/296.svg",
+    name: "hello",
+  };
+  const renderBranding = () => {
+    return (
+      <Image
+        src={`${branding.URL}`}
+        width={36}
+        height={36}
+        alt="Picture of the author"
+      />
+    );
+  };
+
   return (
     <ThemeProvider theme={theme ?? {}}>
-      <Dashboard>{children}</Dashboard>
+      <Header>
+        <nav>
+          <Link href="/"> {renderBranding()}</Link>
+          <Link href={`/hub/${currentPath}/teams`}>Teams</Link>
+          <Link href={`/hub/${currentPath}/members`}>Members</Link>
+          <Link href={`/hub/${currentPath}/clients`}>Clients</Link>
+          {/* <Link href={`/hub/${currentPath}/tasks`}>Tasks</Link>
+          <Link href={`/hub/${currentPath}/request`}>Requests</Link> */}
+        </nav>
+      </Header>
+      <Container>
+        <SideBar>
+          <h1>LEFT NAV</h1>
+          <Link href={`/hub/workspace`}>Workspace</Link>
+          {/* <Link href={`/hub/analytics`}>Analytics</Link>
+          <Link href={`/hub/rules`}>Rules</Link>
+          <Link href={`/hub/triggers`}>Triggers</Link> */}
+        </SideBar>
+        <CenterStage>{children}</CenterStage>
+        <SideBar>
+          {["eugene", "peter", "maestrado"].map((a, i) => (
+            <li key={i}>{a}</li>
+          ))}
+          <h1>RIGHT NAV</h1>
+          The third column, with more content than before!
+          asdffasdasfafasdfadfsdfdsafdddddeeeeeeeee
+        </SideBar>
+      </Container>
+      <Footer>Design and Developed By Eugene D Maestrado</Footer>
     </ThemeProvider>
   );
 }

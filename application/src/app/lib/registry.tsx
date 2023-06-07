@@ -3,10 +3,9 @@
 import React, { useState } from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
-export default function StyledComponentsRegistry<T>({
+export default function StyledComponentsRegistry({
   children,
 }: {
-  // baseTheme: Record<string, {}>;
   children: React.ReactNode;
 }) {
   // Only create stylesheet once with lazy initial state
