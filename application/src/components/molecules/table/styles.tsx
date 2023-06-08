@@ -1,45 +1,47 @@
 import styled, { css } from "styled-components";
 
-export const StyledTable = styled.table`
-  background-color: #f965b4;
-  width: 100%;
-`;
+export {};
 
-export const THeader = styled.thead`
-  background-color: red;
-  text-align: left;
-`;
+// export const StyledTable = styled.table`
+//   background-color: #f965b4;
+//   width: 100%;
+// `;
 
-export const TRow = styled.tr`
-  word-break: break-all;
-`;
+// export const THeader = styled.thead`
+//   background-color: red;
+//   text-align: left;
+// `;
 
-export const TCell = (props: any) => {
-  const { variant, children } = props;
-  if (variant === "header") {
-    return <StyledTH>{children} </StyledTH>;
-  }
-  return <StyledTD> {children}</StyledTD>;
-};
+// export const TRow = styled.tr`
+//   word-break: break-all;
+// `;
 
-export const StyledTH = styled.th`
-  background-color: aliceblue;
-  text-align: left;
-`;
+// export const TCell = (props: any) => {
+//   const { variant, children } = props;
+//   if (variant === "header") {
+//     return <StyledTH>{children} </StyledTH>;
+//   }
+//   return <StyledTD> {children}</StyledTD>;
+// };
 
-export const StyledTD = styled.td`
-  background-color: aquamarine;
-`;
+// export const StyledTH = styled.th`
+//   background-color: aliceblue;
+//   text-align: left;
+// `;
 
-export const TBody = styled.tbody`
-  background-color: #75bbbb;
-`;
+// export const StyledTD = styled.td`
+//   background-color: aquamarine;
+// `;
 
-export const TFoot = styled.tfoot`
-  background-color: #25e7e7;
-`;
-// import ReactTable from "./Shell/Table";
-// import { TableProps, ExtendedColumns } from "./types";
+// export const TBody = styled.tbody`
+//   background-color: #75bbbb;
+// `;
+
+// export const TFoot = styled.tfoot`
+//   background-color: #25e7e7;
+// `;
+// // import ReactTable from "./Shell/Table";
+// // import { TableProps, ExtendedColumns } from "./types";
 
 // export const getResponsiveHeaders = ({ columns }: TableProps) => {
 //   const headers = css`

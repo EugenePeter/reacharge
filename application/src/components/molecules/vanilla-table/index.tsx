@@ -7,7 +7,6 @@ interface Props {
 const MyGridComponent: FC<Props> = async (props) => {
   const onSubmit = async (data) => {
     "use server";
-    console.log("DATA:", data);
   };
   return (
     <>

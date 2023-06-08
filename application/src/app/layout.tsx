@@ -1,10 +1,10 @@
-import "./globals.css";
+// import "./globals.css";
 import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
 import { getClient } from "./lib/client";
 import { GET_THEME } from "../utils/getHostThemes/gql";
 import { BaseProvider } from "../context/BaseProvider";
-
+import { theme } from "@/design-system";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -23,6 +23,8 @@ export default async function RootLayout({
       host: "localhost:3000",
     },
   });
+
+  console.log("Ttheme.HHHEME>>>:", theme);
   return (
     <html lang="en">
       <head>
@@ -32,7 +34,7 @@ export default async function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <BaseProvider theme={data.results}>
+        <BaseProvider theme={theme ?? {}}>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </BaseProvider>
       </body>

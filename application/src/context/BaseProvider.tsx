@@ -5,8 +5,6 @@ export const BaseContext = createContext<any>({});
 
 export const BaseProvider = ({ children, theme }: any) => {
   return (
-    <BaseContext.Provider value={{ email: "@@@@@@@@@@@@@@eugene", theme }}>
-      {children}
-    </BaseContext.Provider>
+    <BaseContext.Provider value={{ ...theme }}>{children}</BaseContext.Provider>
   );
 };

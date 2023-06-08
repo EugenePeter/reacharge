@@ -1,8 +1,8 @@
 "use client";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Children } from "@/types";
 import React, { FC } from "react";
-
+import { ThemeType } from "@/design-system/types";
 interface Props extends Children {}
 
 const CenterStage: FC<Props> = (props) => {
@@ -11,16 +11,26 @@ const CenterStage: FC<Props> = (props) => {
 };
 
 export default CenterStage;
+
+interface Styles {
+  theme: ThemeType;
+}
+
+const deriveStyles = (props: Styles) => {
+  const { theme } = props;
+  return css`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 6;
+    flex-shrink: 6;
+    flex-basis: 0;
+    width: 100%;
+    height: calc(100vh - (${theme.sizes.height.BASE.rem} * 2));
+    word-break: break-all;
+    background-color: #ffffff;
+  `;
+};
 export const StyledCenterStage = styled.main`
-  position: relative;
-  display: flex;
-  overflow: auto;
-  flex-direction: column;
-  flex-grow: 6;
-  flex-shrink: 6;
-  flex-basis: 0;
-  width: 100%;
-  height: calc(100vh - 80px);
-  word-break: break-all;
-  background-color: #ffffff;
+  ${deriveStyles}
 `;

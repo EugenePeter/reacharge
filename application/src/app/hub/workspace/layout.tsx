@@ -14,7 +14,7 @@ const WorkspaceLayout: FC<Props> = (props) => {
   console.log("current path:", path);
   return (
     <>
-      <h3>{currentPath} </h3>
+      {/* <h3>{currentPath} </h3> */}
       {children}
     </>
   );

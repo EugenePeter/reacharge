@@ -1,6 +1,6 @@
 "use client";
 import React, { HTMLProps, useMemo } from "react";
-import "./styles.scss";
+// import "./styles.scss";
 import { dummyData, dummyMembers, Members } from "@/utils";
 import {
   Column,
@@ -13,11 +13,15 @@ import {
   createColumnHelper,
 } from "@tanstack/react-table";
 
-import { Body, Header, Footer } from "./Shell";
+import { Body, Header, Footer, Table } from "./Shell";
+
 import Pagination from "./pagination";
 import IndeterminateCheckbox from "./inderterminate-checkbox";
+import TablePanel from "../panel";
 
-function Table() {
+import { Button } from "@/components";
+
+function Grid() {
   // const [data, setData] = React.useState(dummyData);
   const [rowSelection, setRowSelection] = React.useState({});
   const [globalFilter, setGlobalFilter] = React.useState("");
@@ -108,15 +112,20 @@ function Table() {
   });
 
   return (
-    <div className="p-2">
-      <table>
+    <>
+      <TablePanel className={`padding-t--base`}>
+        <span className="material-symbols-outlined">filter_alt</span> Filter{" "}
+        <input placeholder="sort" /> <input placeholder="search" />
+        <Button label="tag" width="7.687rem" />{" "}
+        <Button label="add contact" width="4.687rem" />
+      </TablePanel>
+      <Table>
         <Header table={table} />
         <Body table={table} />
-        <Footer table={table} />
-      </table>
+        {/* <Footer table={table} /> */}
+      </Table>
       <Pagination table={table} rowSelection={rowSelection} />
-      <hr />
-    </div>
+    </>
   );
 }
-export default Table;
+export default Grid;

@@ -1,8 +1,8 @@
 "use client";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Children } from "@/types";
 import React, { FC } from "react";
-
+import { ThemeType } from "@/design-system/types";
 interface Props extends Children {}
 
 const Footer: FC<Props> = (props) => {
@@ -11,6 +11,23 @@ const Footer: FC<Props> = (props) => {
 };
 
 export default Footer;
+
+interface Styles {
+  theme: ThemeType;
+}
+
+const deriveStyles = (props: Styles) => {
+  const { theme } = props;
+  return css`
+    width: 100%;
+    height: ${theme.sizes.height.BASE.rem};
+    color: #fff;
+    background-color: #3b3b3b;
+    position: absolute;
+    bottom: 0;
+  `;
+};
+
 export const StyledFooter = styled.footer`
   width: 100%;
   height: 40px;
@@ -18,4 +35,5 @@ export const StyledFooter = styled.footer`
   background-color: #3b3b3b;
   position: absolute;
   bottom: 0;
+  ${deriveStyles}
 `;

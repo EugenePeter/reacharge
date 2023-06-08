@@ -12,7 +12,6 @@ interface Props<T> {
 
 const Stepper = <T,>(props: Props<T>) => {
   const { data } = props;
-  console.log("Stepper comp data:", data);
   return (
     <StyledStepper>
       <p>

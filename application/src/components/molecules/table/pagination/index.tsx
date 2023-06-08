@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { TableProps } from "../types";
+import { PaginationContainer } from "./styles";
 interface Props extends TableProps {
   rowSelection: {};
 }
@@ -7,7 +8,7 @@ interface Props extends TableProps {
 const Pagination: FC<Props> = (props) => {
   const { table, rowSelection } = props;
   return (
-    <div className="flex items-center gap-2">
+    <PaginationContainer className="flex items-center gap-2">
       <button
         className="border rounded p-1"
         onClick={() => table.setPageIndex(0)}
@@ -91,7 +92,7 @@ const Pagination: FC<Props> = (props) => {
           Log table.getSelectedRowModel().flatRows
         </button>
       </div>
-    </div>
+    </PaginationContainer>
   );
 };
 

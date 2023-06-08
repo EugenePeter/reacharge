@@ -9,8 +9,6 @@ interface Props extends Children {
 const Pills: FC<Props> = (props) => {
   const { children, color } = props;
 
-  const date = new Date();
-  console.log("DATA:", date.toDateString());
   return <StyledDiv color={color}>{children}</StyledDiv>;
 };
 

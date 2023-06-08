@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { NewColor, Palette } from "./types";
+import { ThemeType } from "@/design-system/types";
 const colorsDictionary: NewColor = {
   primary: {
     color: "#2196f3",
@@ -24,13 +25,25 @@ const deriveColors = ({ color }: { color: Palette }) => {
     colorsDictionary["info"].color};
   `;
 };
+
+interface Styles {
+  theme: ThemeType;
+}
+
+const styles = (props: Styles) => {
+  const { theme } = props;
+  return css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: ${theme.sizes.utils.xxs.rem};
+    border-radius: 25px;
+    height: ${theme.sizes.utils.xxs.rem};
+    color: #fff;
+  `;
+};
+
 export const StyledDiv = styled.div<{ color: Palette }>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10px;
-  border-radius: 25px;
-  height: 10px;
-  color: #fff;
+  ${styles}
   ${deriveColors}
 `;
