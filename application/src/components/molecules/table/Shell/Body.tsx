@@ -38,9 +38,17 @@ const Body: React.FC<
                   style={{
                     width: deriveWidth(),
                   }}
-                  onClick={() => actions.addTab(cell)}
                 >
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  {column === "fullName" ? (
+                    <span onClick={() => actions.addTab(cell)}>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </span>
+                  ) : (
+                    flexRender(cell.column.columnDef.cell, cell.getContext())
+                  )}
                 </td>
               );
             }

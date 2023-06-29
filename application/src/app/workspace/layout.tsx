@@ -11,6 +11,7 @@ import {
   CenterStage,
   Container,
   Wrapper,
+  Drawer,
 } from "@/components";
 import Image from "next/image";
 import { Nav } from "@/components";
@@ -57,6 +58,7 @@ export default function WorkspaceLayout(props: { children: React.ReactNode }) {
     { href: `/workspace/clients`, name: "clients" },
   ];
 
+  console.log("THE THEME:", theme);
   return (
     <>
       <GlobalStyle />
@@ -100,7 +102,7 @@ export default function WorkspaceLayout(props: { children: React.ReactNode }) {
               <Nav links={[{ href: "/workspace", name: "workspace" }]} />
             </Wrapper>
           </SideBar>
-          <CenterStage>{children}</CenterStage>
+          {/* <CenterStage>{children}</CenterStage> */}
           {/* <SideBar>
             <Wrapper
               direction="column"
@@ -120,6 +122,7 @@ export default function WorkspaceLayout(props: { children: React.ReactNode }) {
             </Wrapper>
           </SideBar> */}
         </Container>
+        <Drawer />
         <Footer>Design and Developed By Eugene D Maestrado</Footer>
       </ThemeProvider>
     </>

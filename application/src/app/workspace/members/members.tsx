@@ -22,10 +22,7 @@ const Members: FC<Props> = (props) => {
     },
   ]);
 
-  console.log("DATAAAAAAAAAAA: ", tabs);
-
   const handleClick = (m: any) => {
-    console.log("AFASFFASD: ", m);
     setTabs((prev) => {
       const uniqueUser = tabs.some((t) => t.id === m.row.id);
       if (!uniqueUser) {

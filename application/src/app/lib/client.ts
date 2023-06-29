@@ -35,7 +35,7 @@ export const query = async <
         cache: new InMemoryCache(),
         link: new HttpLink({
           uri: "http://localhost:4000",
-          fetchOptions: { cache: "no-store" },
+          // fetchOptions: { cache: "no-store" },
         }),
       })
   );

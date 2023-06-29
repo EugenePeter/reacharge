@@ -135,8 +135,6 @@ function Grid(props: any) {
     [columnHelper, datas.columns]
   );
 
-  console.log("COOOOOOOOOOOOOLS:", columns);
-
   const table = useReactTable({
     data,
     columns,
@@ -229,7 +227,6 @@ function Grid(props: any) {
       <Table>
         <Header table={table} />
         <Body table={table} actions={actions} />
-        {/* <Footer table={table} /> */}
       </Table>
       <Panel>
         <Pagination table={table} rowSelection={rowSelection} />
