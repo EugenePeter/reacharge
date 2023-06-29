@@ -15,14 +15,25 @@ const deriveStyles = (props: Styles) => {
     width: 100%;
     height: ${theme.sizes.height.md.rem};
     padding-top: ${className ? theme.sizes.height.md.rem : 0};
+    position: relative;
   `;
 };
 
-export const TablePanelContainer = styled.div<Styles>`
+export const PanelContainer = styled.div<Styles>`
   ${deriveStyles}
   input {
     height: ${({ theme }: Styles) => theme.sizes.height.md.rem};
-    border-radius: 6px;
+    border-radius: 4.6px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    outline: none;
+    border: ${({ theme }: Styles) => theme.sizes.line.zepto.rem} solid lightgrey;
+    box-sizing: border-box;
+  }
+
+  select {
+    height: ${({ theme }: Styles) => theme.sizes.height.md.rem};
+    border-radius: 4.6px;
     padding-left: 5px;
     padding-bottom: 2px;
     outline: none;

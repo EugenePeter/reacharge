@@ -35,7 +35,6 @@ export const StyledHeader = styled.header`
   ${deriveStyles}
 
   nav {
-    margin-left: 10px;
     display: flex;
     align-items: center;
     gap: 4px;

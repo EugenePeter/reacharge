@@ -35,8 +35,6 @@ export default function HubLayout(props: { children: React.ReactNode }) {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
   }
-
-
   .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,

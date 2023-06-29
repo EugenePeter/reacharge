@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme ?? {}}>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <Link href={`/hub`}>Go to hub</Link>
+        <Link href={`/workspace`}>Go to workspace</Link>
       </main>
     </ThemeProvider>
   );

@@ -134,3 +134,21 @@ export const GET_THEME = gql`
     }
   }
 `;
+
+export const GET_MEMBERS_TABLE = gql`
+  query membersTable {
+    results: membersTable {
+      columns {
+        Header
+        accessor
+      }
+      data {
+        fullName
+        email
+        ratings
+        trainingCompleted
+        tasks
+      }
+    }
+  }
+`;

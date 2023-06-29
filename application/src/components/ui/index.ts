@@ -8,4 +8,7 @@ export { default as Stepper } from "./stepper";
 export { default as Stars } from "./star";
 export { default as Indicator } from "./indicator";
 export { default as GraphIcon } from "./graph-icon";
-export { default as Button } from "./button";
+export { Button } from "./button";
+export { default as Panel } from "./panel";
+export { default as Stack } from "./stack";
+export { default as Wrapper } from "./wrapper";

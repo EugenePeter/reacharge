@@ -1,15 +1,39 @@
 import React, { FC } from "react";
 import { Children } from "@/types";
-import { StyledButton } from "./styles";
+import { StyledButton, ButtonWrapper } from "./styles";
+import { Stack } from "@/components";
 interface Props extends Children {
   width: string;
-  label: string;
+  label?: string;
+  icon?: {
+    name: string;
+    start?: true;
+    end?: true;
+  };
   // Add your prop types here
 }
 
-const Button: FC<Props> = (props) => {
-  const { width, label } = props;
-  return <StyledButton width={width}>{label}</StyledButton>;
-};
+export const Button: FC<Props> = (props) => {
+  const { width, label, icon } = props;
 
-export default Button;
+  const getButtonContent = () => {
+    if (!icon) return label;
+    return (
+      <>
+        {icon.start ? (
+          <span className="material-symbols-outlined">{icon.name}</span>
+        ) : (
+          <></>
+        )}
+        <StyledButton width={width}>{label}</StyledButton>
+        {icon.end ? (
+          <span className="material-symbols-outlined">{icon.name}</span>
+        ) : (
+          <></>
+        )}
+      </>
+    );
+  };
+
+  return <ButtonWrapper width={width}>{getButtonContent()}</ButtonWrapper>;
+};

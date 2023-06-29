@@ -49,7 +49,7 @@ export default async function Page() {
   // const usersData = getUsers();
 
   const displayUsers = async () => {
-    const artist = await artistData;
+    // const artist = await artistData;
     return (
       <div>
         <h2>NAME</h2>

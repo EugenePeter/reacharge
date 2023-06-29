@@ -1,17 +1,15 @@
 "use client";
 import React, { FC } from "react";
-import { TablePanelContainer } from "./styles";
+import { PanelContainer } from "./styles";
 import { Children } from "@/types";
 interface Props extends Children {
   // Add your prop types here
   className?: string;
 }
 
-const TablePanel: FC<Props> = (props) => {
+const Panel: FC<Props> = (props) => {
   const { children, className } = props;
-  return (
-    <TablePanelContainer className={className}>{children}</TablePanelContainer>
-  );
+  return <PanelContainer className={className}>{children}</PanelContainer>;
 };
 
-export default TablePanel;
+export default Panel;

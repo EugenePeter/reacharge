@@ -1,4 +1,11 @@
-import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import {
+  ApolloQueryResult,
+  ApolloClient,
+  HttpLink,
+  InMemoryCache,
+  OperationVariables,
+  QueryOptions,
+} from "@apollo/client";
 import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rsc";
 
 export const revalidate = 10; // revalidate this page every 60 seconds
@@ -14,3 +21,23 @@ export const { getClient } = registerApolloClient(() => {
     }),
   });
 });
+
+export const query = async <
+  T = any,
+  TVariables extends OperationVariables = OperationVariables
+>(
+  options: QueryOptions<TVariables, T>
+): Promise<ApolloQueryResult<T>> => {
+  const { query, variables } = options;
+  const { getClient } = registerApolloClient(
+    () =>
+      new ApolloClient({
+        cache: new InMemoryCache(),
+        link: new HttpLink({
+          uri: "http://localhost:4000",
+          fetchOptions: { cache: "no-store" },
+        }),
+      })
+  );
+  return getClient().query({ query, variables });
+};
