@@ -17,33 +17,35 @@ const getMembersTable = () => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.getMembersTable = getMembersTable;
 const computeTaskCompletion = (tasks) => {
+    if (!tasks.length)
+        return [];
     const numOfTasks = tasks.length;
     const completedTasks = tasks.reduce((count, task) => (task.status === "completed" ? count + 1 : count), 0);
-    return `${completedTasks}/${numOfTasks}`;
+    return [
+        {
+            done: completedTasks,
+            total: numOfTasks,
+        },
+    ];
 };
+function structureMemberTable(columns, rows) {
+    const data = rows.map((item) => {
+        const filteredItem = {};
+        columns.forEach((column) => {
+            if (!item.hasOwnProperty(column.accessorKey))
+                return;
+            if (column.accessorKey !== "tasks")
+                return (filteredItem[column.accessorKey] = item[column.accessorKey]);
+            return (filteredItem[column.accessorKey] = computeTaskCompletion(item[column.accessorKey]));
+        });
+        return filteredItem;
+    });
+    return { columns, data };
+}
 const table = () => __awaiter(void 0, void 0, void 0, function* () {
     const columns = yield dataAccess_1.membersDA.columns();
     const data = yield dataAccess_1.membersDA.data();
-    function structureMemberTable(columns, rows) {
-        const data = [];
-        rows.forEach((row) => {
-            const dataObj = {};
-            Object.entries(row).forEach(([key, value]) => {
-                const colIndex = columns.findIndex((col) => col.accessor === key);
-                const colItem = columns === null || columns === void 0 ? void 0 : columns[colIndex];
-                if (!colItem)
-                    return;
-                dataObj[colItem.accessor] = String(value);
-                if (colItem.accessor === "tasks" &&
-                    Array.isArray(value) &&
-                    value.length) {
-                    dataObj[colItem.accessor] = computeTaskCompletion(value);
-                }
-            });
-            data.push(dataObj);
-        });
-        return { columns, data };
-    }
-    return structureMemberTable(columns, data);
+    if (columns.length && data.length)
+        return structureMemberTable(columns, data);
 });
 exports.table = table;

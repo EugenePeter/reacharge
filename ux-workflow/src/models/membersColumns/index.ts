@@ -11,4 +11,4 @@ schema.statics.build = (attrs: ColumnsAttrs) => {
 export const Columns = mongoose.model<
   ColumnsDocs,
   Model<ColumnsAttrs, ColumnsDocs>
->("Member-columns", schema);
+>("Member-columns-v2", schema);

@@ -18,7 +18,7 @@ exports.vacanciesResolvers = {
             console.log("AARGS:", args);
             try {
                 const themes = yield services_1.themeServices.getThemes(host);
-                console.log("THEMESSSS:", themes);
+                console.log("THEMESSSS:");
                 return themes;
             }
             catch (e) {

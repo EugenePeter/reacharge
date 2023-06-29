@@ -16,7 +16,7 @@ exports.membersTableResolvers = {
         membersTable: () => __awaiter(void 0, void 0, void 0, function* () {
             try {
                 const membersTable = yield services_1.membersServices.table();
-                console.log("MEMBERS TABLE:", membersTable.data[0]);
+                console.log("MEMBERS TABLE:", membersTable === null || membersTable === void 0 ? void 0 : membersTable.columns);
                 return membersTable;
             }
             catch (e) {

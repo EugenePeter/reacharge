@@ -11,4 +11,4 @@ const schema = (0, schemaBuilder_1.buildSchema)(schema_1.membersTableSchema);
 schema.statics.build = (attrs) => {
     return new exports.Columns(attrs);
 };
-exports.Columns = mongoose_1.default.model("Member-columns", schema);
+exports.Columns = mongoose_1.default.model("Member-columns-v2", schema);

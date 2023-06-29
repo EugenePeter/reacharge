@@ -6,7 +6,7 @@ export const vacanciesResolvers = {
       console.log("AARGS:", args);
       try {
         const themes = await themeServices.getThemes(host);
-        console.log("THEMESSSS:", themes);
+        console.log("THEMESSSS:");
         return themes;
       } catch (e) {
         console.log("NO VACANCY FOUND", e);

@@ -15,10 +15,8 @@ exports.themesResolvers = {
     Query: {
         getTheme: (parent, args, context) => __awaiter(void 0, void 0, void 0, function* () {
             const { host } = args;
-            // console.log("AARGS:", args);
             try {
                 const themes = yield services_1.themeServices.getThemes(host);
-                console.log("THEMESSSS:", themes);
                 return themes;
             }
             catch (e) {
@@ -26,14 +24,5 @@ exports.themesResolvers = {
                 return e;
             }
         }),
-        // getUXConfig: async () => {
-        //   try {
-        //     const membersTable = await membersServices.getMembersTable();
-        //     return membersTable;
-        //   } catch (e) {
-        //     console.log("NO VACANCY FOUND", e);
-        //     return e;
-        //   }
-        // },
     },
 };

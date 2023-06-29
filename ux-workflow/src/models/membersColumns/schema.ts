@@ -1,8 +1,8 @@
 export const membersTableSchema = {
-  Header: {
+  header: {
     type: "String",
   },
-  accessor: {
+  accessorKey: {
     type: "String",
   },
 };

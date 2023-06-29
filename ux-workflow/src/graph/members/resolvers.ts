@@ -4,7 +4,7 @@ export const membersTableResolvers = {
     membersTable: async () => {
       try {
         const membersTable = await membersServices.table();
-        console.log("MEMBERS TABLE:", membersTable.data[0]);
+        console.log("MEMBERS TABLE:", membersTable?.columns);
         return membersTable;
       } catch (e) {
         console.log("NO VACANCY FOUND", e);

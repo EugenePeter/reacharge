@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.membersTableSchema = void 0;
 exports.membersTableSchema = {
-    Header: {
+    header: {
         type: "String",
     },
-    accessor: {
+    accessorKey: {
         type: "String",
     },
 };
